@@ -20,6 +20,21 @@ struct HouseData: Identifiable {
     }
 }
 
+let houseData = [
+    HouseData(name: "Matthews", percentage: 5.2),
+    HouseData(name: "Ross", percentage: 6.2),
+    HouseData(name: "Parent", percentage: 6.2),
+    HouseData(name: "Ondaatje", percentage: 7.6),
+    HouseData(name: "Uplands", percentage: 8.1),
+    HouseData(name: "Colebrook", percentage: 8.1),
+    HouseData(name: "Rashleigh", percentage: 8.1),
+    HouseData(name: "Cooper", percentage: 9.0),
+    HouseData(name: "Memorial", percentage: 9.5),
+    HouseData(name: "Grove", percentage: 9.5),
+    HouseData(name: "Moodie", percentage: 10.4),
+    HouseData(name: "Ryder", percentage: 12.3)
+]
+
 struct ContentView: View {
     var body: some View {
         VStack {
