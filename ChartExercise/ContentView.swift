@@ -39,6 +39,12 @@ let houseData = [
 
 struct ContentView: View {
     var body: some View {
+        
+        Text("Percentage of students at LCS, by house")
+                        .font(.title2)
+                        .bold()
+                        .padding()
+        
         Chart {
             ForEach(houseData) { house in
                 SectorMark(
