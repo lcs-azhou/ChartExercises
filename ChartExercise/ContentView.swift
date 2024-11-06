@@ -6,6 +6,19 @@
 //
 
 import SwiftUI
+import Charts
+
+// 定义 HouseData 结构
+struct HouseData: Identifiable {
+    let id = UUID()
+    let name: String
+    let percentage: Double
+
+    init(name: String, percentage: Double) {
+        self.name = name
+        self.percentage = percentage
+    }
+}
 
 struct ContentView: View {
     var body: some View {
