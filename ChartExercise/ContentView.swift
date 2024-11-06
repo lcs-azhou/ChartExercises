@@ -13,7 +13,7 @@ struct HouseData: Identifiable {
     let id = UUID()
     let name: String
     let percentage: Double
-
+    
     init(name: String, percentage: Double) {
         self.name = name
         self.percentage = percentage
@@ -45,7 +45,11 @@ struct ContentView: View {
                     angle: .value("Percentage", house.percentage)
                 )
                 .foregroundStyle(by: .value("House", house.name))
-                
+                .annotation(position: .overlay) {
+                    Text("\(house.percentage, specifier: "%.1f")%")
+                        .font(.caption)
+                        .foregroundColor(.white)
+                }
             }
         }
         .padding()
