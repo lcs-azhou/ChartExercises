@@ -35,13 +35,18 @@ let houseData = [
     HouseData(name: "Ryder", percentage: 12.3)
 ]
 
+
+
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Chart {
+            ForEach(houseData) { house in
+                SectorMark(
+                    angle: .value("Percentage", house.percentage)
+                )
+                .foregroundStyle(by: .value("House", house.name))
+                
+            }
         }
         .padding()
     }
